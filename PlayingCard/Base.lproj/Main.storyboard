@@ -32,6 +32,7 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="NM7-rI-QCW" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="6sN-Qe-6LF"/>
                             <constraint firstItem="NM7-rI-QCW" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="H65-a5-n7k"/>
@@ -41,9 +42,20 @@
                             <constraint firstItem="NM7-rI-QCW" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="wtU-Xk-BSB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="7Qh-qP-kxk" appends="YES" id="vgb-X7-5Y9"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="playingCardView" destination="NM7-rI-QCW" id="Gy7-xl-Sau"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="7Qh-qP-kxk">
+                    <connections>
+                        <action selector="flipCard:" destination="BYZ-38-t0r" id="cjl-lQ-wd1"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="132" y="133.00492610837438"/>
         </scene>
